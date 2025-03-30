@@ -10,3 +10,12 @@ https://YOUR-USERNAME.github.io/math-learning/
   - فصل 1: راهبردهای حل مسئله
   - فصل 2: عددهای صحیح
   - [سایر فصل‌ها] 
+
+## ساختار فایل‌ها
+- `index.html`: صفحه اصلی
+- `styles.css`: استایل‌های سایت
+- `script.js`: اسکریپت‌های سایت
+- `grade7/`: فصل‌های پایه هفتم
+  - `chapter1/1.html`: فصل اول
+  - `chapter2/2.html`: فصل دوم
+  و ... 
