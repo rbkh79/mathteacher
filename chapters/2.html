@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عددهای صحیح | ریاضی هفتم</title>
+    
+    <!-- فونت Vazir -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">آموزش ریاضی</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- منوی اصلی -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- نوار مسیر -->
+        <div class="bg-light py-2">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="../../index.html">خانه</a></li>
+                        <li class="breadcrumb-item"><a href="../index.html">ریاضی هفتم</a></li>
+                        <li class="breadcrumb-item active">فصل 2: عددهای صحیح</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <!-- منوی کناری -->
+                <div class="col-lg-3">
+                    <div class="lesson-sidebar sticky-lg-top" style="top: 80px;">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">فهرست مطالب</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#intro">معرفی عددهای علامت‌دار</a>
+                                    <a class="nav-link" href="#addition1">جمع و تفریق (۱)</a>
+                                    <a class="nav-link" href="#addition2">جمع و تفریق (۲)</a>
+                                    <a class="nav-link" href="#multiplication">ضرب و تقسیم</a>
+                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوای اصلی -->
+                <div class="col-lg-9">
+                    <article class="lesson-content">
+                        <section id="intro" class="mb-5">
+                            <h2 class="mb-4">معرفی عددهای علامت‌دار</h2>
+                            <div class="math-display text-center my-4">
+                                \[ ..., -3, -2, -1, 0, 1, 2, 3, ... \]
+                            </div>
+                            <div class="example-box bg-light p-4 rounded mb-4">
+                                <h5>مثال کاربردی:</h5>
+                                <ul>
+                                    <li>دمای هوا: 5 درجه بالای صفر (+5)</li>
+                                    <li>عمق دریا: 100 متر زیر سطح دریا (-100)</li>
+                                    <li>تراز حساب بانکی: 50 هزار تومان بدهکار (-50)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="addition1" class="mb-5">
+                            <h2 class="mb-4">جمع و تفریق عددهای صحیح (۱)</h2>
+                            <div class="example-box bg-light p-4 rounded mb-4">
+                                <h5>مثال 1:</h5>
+                                <p>حاصل عبارت زیر را به دست آورید:</p>
+                                <div class="math-display text-center my-3">
+                                    \[ (+5) + (-3) = ? \]
+                                </div>
+                                <button class="btn btn-primary mb-2" onclick="toggleSolution('solution1')">
+                                    نمایش راه حل
+                                </button>
+                                <div id="solution1" class="collapse">
+                                    <hr>
+                                    <p>راه حل:</p>
+                                    <ol>
+                                        <li>5 واحد به سمت راست (مثبت)</li>
+                                        <li>3 واحد به سمت چپ (منفی)</li>
+                                        <li>نتیجه: 2 واحد به سمت راست \[ (+5) + (-3) = +2 \]</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- سایر بخش‌ها -->
+
+                        <section id="exercises" class="mb-5">
+                            <h2 class="mb-4">تمرین‌ها</h2>
+                            <div class="exercise-card">
+                                <div class="card-body">
+                                    <h5>تمرین 1:</h5>
+                                    <p>حاصل عبارت‌های زیر را به دست آورید:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">الف) \( (+8) + (-5) = \)</label>
+                                                <input type="number" class="form-control" id="ex1-a">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">ب) \( (-4) \times (+3) = \)</label>
+                                                <input type="number" class="form-control" id="ex1-b">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="checkExercise(1)">بررسی پاسخ</button>
+                                    <div id="feedback1" class="alert mt-3 d-none"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- فوتر -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">تمامی حقوق محفوظ است &copy; 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- اسکریپت‌ها -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // نمایش/مخفی کردن راه حل
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            bootstrap.Collapse.getOrCreateInstance(solution).toggle();
+        }
+
+        // بررسی پاسخ تمرین‌ها
+        function checkExercise(number) {
+            const feedback = document.getElementById(`feedback${number}`);
+            let isCorrect = true;
+            let message = '';
+
+            switch(number) {
+                case 1:
+                    const ans1a = document.getElementById('ex1-a').value;
+                    const ans1b = document.getElementById('ex1-b').value;
+                    
+                    if(ans1a === '3' && ans1b === '-12') {
+                        message = 'آفرین! همه پاسخ‌ها صحیح هستند.';
+                    } else {
+                        isCorrect = false;
+                        message = 'پاسخ‌ها صحیح نیستند. دوباره تلاش کنید.';
+                    }
+                    break;
+            }
+
+            feedback.classList.remove('d-none', 'alert-success', 'alert-danger');
+            feedback.classList.add(isCorrect ? 'alert-success' : 'alert-danger');
+            feedback.innerHTML = message;
+        }
+    </script>
+</body>
+</html> 

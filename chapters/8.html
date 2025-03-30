@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بردار و مختصات | ریاضی هفتم</title>
+</head>
+<body>
+    <main>
+        <div class="container py-5">
+            <div class="row">
+                <!-- منوی کناری -->
+                <div class="col-lg-3">
+                    <div class="lesson-sidebar sticky-lg-top">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">فهرست مطالب</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#vector">پاره خط جهت‌دار</a>
+                                    <a class="nav-link" href="#equal">بردارهای مساوی و قرینه</a>
+                                    <a class="nav-link" href="#coordinates">مختصات</a>
+                                    <a class="nav-link" href="#translation">بردار انتقال</a>
+                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوای اصلی -->
+                <div class="col-lg-9">
+                    <article class="lesson-content">
+                        <section id="coordinates">
+                            <h2>مختصات</h2>
+                            <p>هر نقطه در صفحه با دو عدد مشخص می‌شود که مختصات آن نقطه نامیده می‌شوند.</p>
+                            <div class="example-box">
+                                <h5>مثال:</h5>
+                                <img src="../../images/coordinates.svg" alt="دستگاه مختصات" class="img-fluid mb-3">
+                                <p>نقطه A به مختصات (2, 3) را در نظر بگیرید:</p>
+                                <ul>
+                                    <li>عدد اول (2): فاصله از مبدأ در جهت محور x</li>
+                                    <li>عدد دوم (3): فاصله از مبدأ در جهت محور y</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="exercises">
+                            <h2>تمرین‌ها</h2>
+                            <div class="exercise-card">
+                                <div class="card-body">
+                                    <h5>تمرین 1:</h5>
+                                    <p>مختصات نقطه A را پس از انتقال 3 واحد به راست و 2 واحد به بالا بنویسید.</p>
+                                    <p>نقطه A(1, 2)</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label>x جدید:</label>
+                                            <input type="number" class="form-control" id="ex1-x">
+                                        </div>
+                                        <div class="col-6">
+                                            <label>y جدید:</label>
+                                            <input type="number" class="form-control" id="ex1-y">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary mt-3" onclick="checkExercise(1)">بررسی پاسخ</button>
+                                    <div id="feedback1" class="alert mt-3 d-none"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
