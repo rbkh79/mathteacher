@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جبر و معادله | ریاضی هفتم</title>
+    
+    <!-- فونت‌ها و استایل‌ها مثل قبل -->
+</head>
+<body>
+    <header>
+        <!-- هدر مثل قبل -->
+    </header>
+
+    <main>
+        <div class="bg-light py-2">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="../../index.html">خانه</a></li>
+                        <li class="breadcrumb-item"><a href="../index.html">ریاضی هفتم</a></li>
+                        <li class="breadcrumb-item active">فصل 3: جبر و معادله</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <!-- منوی کناری -->
+                <div class="col-lg-3">
+                    <div class="lesson-sidebar sticky-lg-top">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">فهرست مطالب</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#patterns">الگوهای عددی</a>
+                                    <a class="nav-link" href="#expressions">عبارت‌های جبری</a>
+                                    <a class="nav-link" href="#value">مقدار عددی عبارت جبری</a>
+                                    <a class="nav-link" href="#equations">معادله</a>
+                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوای اصلی -->
+                <div class="col-lg-9">
+                    <article class="lesson-content">
+                        <section id="patterns">
+                            <h2>الگوهای عددی</h2>
+                            <div class="example-box">
+                                <h5>مثال:</h5>
+                                <p>الگوی زیر را ادامه دهید:</p>
+                                <div class="math-display">
+                                    \[ 3, 7, 11, 15, ..., ... \]
+                                </div>
+                                <button class="btn btn-primary" onclick="toggleSolution('sol1')">نمایش پاسخ</button>
+                                <div id="sol1" class="collapse">
+                                    <p>در این الگو هر عدد با اضافه کردن 4 به عدد قبلی به دست می‌آید.</p>
+                                    <p>پس دو عدد بعدی: 19 و 23</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="expressions">
+                            <h2>عبارت‌های جبری</h2>
+                            <p>عبارت جبری ترکیبی از اعداد، متغیرها و عملیات ریاضی است.</p>
+                            <div class="math-display">
+                                \[ 2x + 3 \]
+                                \[ 3a - 2b \]
+                            </div>
+                        </section>
+
+                        <section id="exercises" class="mb-5">
+                            <h2>تمرین‌ها</h2>
+                            <div class="exercise-card">
+                                <div class="card-body">
+                                    <h5>تمرین 1:</h5>
+                                    <p>مقدار عددی عبارت \(2x + 3\) را به ازای \(x = 4\) به دست آورید.</p>
+                                    <div class="mb-3">
+                                        <input type="number" class="form-control" id="ex1">
+                                    </div>
+                                    <button class="btn btn-primary" onclick="checkExercise(1)">بررسی پاسخ</button>
+                                    <div id="feedback1" class="alert mt-3 d-none"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- فوتر مثل قبل -->
+    </footer>
+
+    <script>
+        // اسکریپت‌های قبلی
+        function checkExercise(number) {
+            const feedback = document.getElementById(`feedback${number}`);
+            let isCorrect = true;
+            let message = '';
+
+            switch(number) {
+                case 1:
+                    const ans1 = document.getElementById('ex1').value;
+                    if(ans1 === '11') {
+                        message = 'آفرین! پاسخ صحیح است.';
+                    } else {
+                        isCorrect = false;
+                        message = 'پاسخ صحیح نیست. دوباره تلاش کنید.';
+                    }
+                    break;
+            }
+
+            feedback.classList.remove('d-none', 'alert-success', 'alert-danger');
+            feedback.classList.add(isCorrect ? 'alert-success' : 'alert-danger');
+            feedback.innerHTML = message;
+        }
+    </script>
+</body>
+</html> 

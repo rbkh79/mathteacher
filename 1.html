@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهبردهای حل مسئله | ریاضی هفتم</title>
+    <!-- استایل‌ها و فونت‌ها -->
+</head>
+<body>
+    <!-- هدر مشترک -->
+    <main>
+        <div class="container py-5">
+            <div class="row">
+                <!-- منوی کناری -->
+                <div class="col-lg-3">
+                    <div class="lesson-sidebar sticky-lg-top">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">فهرست مطالب</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#strategy1">راهبرد رسم شکل</a>
+                                    <a class="nav-link" href="#strategy2">راهبرد الگوسازی</a>
+                                    <a class="nav-link" href="#strategy3">راهبرد حدس و آزمایش</a>
+                                    <a class="nav-link" href="#strategy4">راهبرد زیرمسئله</a>
+                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوای اصلی -->
+                <div class="col-lg-9">
+                    <article class="lesson-content">
+                        <section id="strategy1" class="mb-5">
+                            <h2>راهبرد رسم شکل</h2>
+                            <p>یکی از روش‌های مؤثر در حل مسائل ریاضی، استفاده از رسم شکل است.</p>
+                            
+                            <div class="example-box bg-light p-4 rounded mb-4">
+                                <h5>مثال 1:</h5>
+                                <p>در یک باغ مستطیل شکل به طول 12 متر و عرض 8 متر، می‌خواهیم دور تا دور آن را نرده‌کشی کنیم. چند متر نرده نیاز داریم؟</p>
+                                <img src="../../images/rectangle.svg" alt="مستطیل" class="img-fluid mb-3">
+                                <button class="btn btn-primary mb-2" onclick="toggleSolution('solution1')">
+                                    نمایش راه حل
+                                </button>
+                                <div id="solution1" class="collapse">
+                                    <hr>
+                                    <p>محیط مستطیل = 2 × (طول + عرض)</p>
+                                    <p>محیط = 2 × (12 + 8) = 2 × 20 = 40</p>
+                                    <p>پس به 40 متر نرده نیاز داریم.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- سایر بخش‌ها -->
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

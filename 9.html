@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آمار و احتمال | ریاضی هفتم</title>
+</head>
+<body>
+    <main>
+        <div class="container py-5">
+            <div class="row">
+                <!-- منوی کناری -->
+                <div class="col-lg-3">
+                    <div class="lesson-sidebar sticky-lg-top">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">فهرست مطالب</h5>
+                                <nav class="nav flex-column">
+                                    <a class="nav-link" href="#data">جمع‌آوری و نمایش داده‌ها</a>
+                                    <a class="nav-link" href="#charts">نمودارها و تفسیر نتیجه‌ها</a>
+                                    <a class="nav-link" href="#probability">احتمال یا اندازه‌گیری شانس</a>
+                                    <a class="nav-link" href="#experiment">احتمال و تجربه</a>
+                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- محتوای اصلی -->
+                <div class="col-lg-9">
+                    <article class="lesson-content">
+                        <section id="probability">
+                            <h2>احتمال یا اندازه‌گیری شانس</h2>
+                            <p>احتمال رخ دادن یک پیشامد برابر است با:</p>
+                            <div class="math-display">
+                                \[ P(A) = \frac{\text{تعداد حالت‌های مطلوب}}{\text{تعداد کل حالت‌های ممکن}} \]
+                            </div>
+                            <div class="example-box">
+                                <h5>مثال:</h5>
+                                <p>در پرتاب یک تاس، احتمال آمدن عدد زوج چقدر است؟</p>
+                                <button class="btn btn-primary" onclick="toggleSolution('sol1')">نمایش پاسخ</button>
+                                <div id="sol1" class="collapse">
+                                    <hr>
+                                    <p>اعداد زوج روی تاس: 2, 4, 6</p>
+                                    <p>تعداد حالت‌های مطلوب: 3</p>
+                                    <p>تعداد کل حالت‌ها: 6</p>
+                                    <div class="math-display">
+                                        \[ P(\text{زوج}) = \frac{3}{6} = \frac{1}{2} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="exercises">
+                            <h2>تمرین‌ها</h2>
+                            <div class="exercise-card">
+                                <div class="card-body">
+                                    <h5>تمرین 1:</h5>
+                                    <p>در پرتاب دو سکه، احتمال آمدن دقیقاً یک رو چقدر است؟</p>
+                                    <div class="mb-3">
+                                        <select class="form-select" id="ex1">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="1/4">1/4</option>
+                                            <option value="1/2">1/2</option>
+                                            <option value="3/4">3/4</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="checkExercise(1)">بررسی پاسخ</button>
+                                    <div id="feedback1" class="alert mt-3 d-none"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
