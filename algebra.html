@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جبر - آموزش ریاضی</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>آموزش ریاضی آنلاین</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="lessons.html" class="active">درس‌ها</a></li>
+                    <li><a href="exercises.html">تمرین‌ها</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="lesson-header">
+            <div class="container">
+                <h2>جبر</h2>
+                <div class="breadcrumbs">
+                    <a href="index.html">صفحه اصلی</a> &gt; 
+                    <a href="lessons.html">درس‌ها</a> &gt; 
+                    <span>جبر</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-content">
+            <div class="container">
+                <div class="lesson-nav">
+                    <h3>فهرست مطالب</h3>
+                    <ul>
+                        <li><a href="#intro">مقدمه</a></li>
+                        <li><a href="#expressions">عبارات جبری</a></li>
+                        <li><a href="#equations">معادلات</a></li>
+                        <li><a href="#functions">توابع</a></li>
+                        <li><a href="#calculator">ماشین‌حساب معادلات</a></li>
+                    </ul>
+                </div>
+
+                <div class="lesson-text">
+                    <article id="intro">
+                        <h3>مقدمه</h3>
+                        <p>جبر یکی از شاخه‌های اصلی ریاضیات است که به مطالعه عبارات ریاضی، معادلات و توابع می‌پردازد. در جبر، از نمادها (معمولاً حروف) برای نمایش اعداد و مقادیر نامعلوم استفاده می‌شود.</p>
+                    </article>
+
+                    <article id="expressions">
+                        <h3>عبارات جبری</h3>
+                        <p>عبارات جبری ترکیبی از متغیرها، اعداد و عملیات ریاضی هستند. برای مثال:</p>
+                        <div class="math-example">
+                            <p>\( 2x + 3y \)</p>
+                            <p>\( a^2 - b^2 \)</p>
+                            <p>\( \frac{x}{y} + \frac{y}{x} \)</p>
+                        </div>
+                        <p>ساده‌سازی عبارات جبری یکی از مهارت‌های اساسی در جبر است. برای مثال، عبارت \( a^2 - b^2 \) را می‌توان به صورت \( (a+b)(a-b) \) بازنویسی کرد.</p>
+                    </article>
+
+                    <article id="equations">
+                        <h3>معادلات</h3>
+                        <p>معادله یک تساوی ریاضی است که شامل یک یا چند متغیر با مقادیر نامعلوم است. هدف از حل یک معادله، یافتن مقادیری برای متغیرها است که تساوی را برقرار کند.</p>
+                        <div class="math-example">
+                            <p>معادله درجه اول: \( ax + b = 0 \) که جواب آن \( x = -\frac{b}{a} \) است.</p>
+                            <p>معادله درجه دوم: \( ax^2 + bx + c = 0 \) که جواب آن با استفاده از فرمول زیر محاسبه می‌شود:</p>
+                            <p>\( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \)</p>
+                        </div>
+                    </article>
+
+                    <article id="functions">
+                        <h3>توابع</h3>
+                        <p>تابع یک رابطه بین مجموعه‌های ورودی و خروجی است، به طوری که هر عنصر از مجموعه ورودی دقیقاً به یک عنصر از مجموعه خروجی نسبت داده می‌شود.</p>
+                        <div class="math-example">
+                            <p>تابع خطی: \( f(x) = mx + b \)</p>
+                            <p>تابع درجه دوم: \( f(x) = ax^2 + bx + c \)</p>
+                            <p>تابع نمایی: \( f(x) = a^x \)</p>
+                        </div>
+                    </article>
+
+                    <article id="calculator">
+                        <h3>ماشین‌حساب معادلات درجه دوم</h3>
+                        <p>از این ابزار برای حل معادلات درجه دوم به فرم \( ax^2 + bx + c = 0 \) استفاده کنید:</p>
+                        <div class="calculator">
+                            <div class="form-group">
+                                <label for="coef-a">ضریب a:</label>
+                                <input type="number" id="coef-a" step="any" value="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="coef-b">ضریب b:</label>
+                                <input type="number" id="coef-b" step="any" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="coef-c">ضریب c:</label>
+                                <input type="number" id="coef-c" step="any" value="0">
+                            </div>
+                            <button id="solve-btn" class="btn">حل معادله</button>
+                            <div id="solution-result" class="solution-result">
+                                <p>نتیجه در اینجا نمایش داده خواهد شد.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>تمامی حقوق این سایت محفوظ است &copy; 2023</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                    <li><a href="#privacy">حریم خصوصی</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+/* بازخورد تمرین‌ها */
+.exercise-feedback {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.exercise-feedback .success {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.exercise-feedback .error {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+/* حالت ریسپانسیو */
+@media (max-width: 768px) {
+    .lesson-content .container {
+        flex-direction: column;
+    }
+    
+    .lesson-nav {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .feature-grid, .lesson-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+} 
