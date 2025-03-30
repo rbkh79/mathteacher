@@ -3,66 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فصل 1: راهبردهای حل مسئله</title>
+    <title>فصل 1: راهبردهای حل مسئله | ریاضی هفتم</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
-    <!-- تغییر مسیر فایل CSS -->
     <link href="../../styles.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <!-- هدر مشترک -->
-    <main>
-        <div class="container py-5">
-            <div class="row">
-                <!-- منوی کناری -->
-                <div class="col-lg-3">
-                    <div class="lesson-sidebar sticky-lg-top">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title mb-3">فهرست مطالب</h5>
-                                <nav class="nav flex-column">
-                                    <a class="nav-link" href="#strategy1">راهبرد رسم شکل</a>
-                                    <a class="nav-link" href="#strategy2">راهبرد الگوسازی</a>
-                                    <a class="nav-link" href="#strategy3">راهبرد حدس و آزمایش</a>
-                                    <a class="nav-link" href="#strategy4">راهبرد زیرمسئله</a>
-                                    <a class="nav-link" href="#exercises">تمرین‌ها</a>
-                                </nav>
-                            </div>
+    <!-- نوار ناوبری -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">ریاضی هفتم</a>
+        </div>
+    </nav>
+
+    <!-- محتوای اصلی -->
+    <main class="container py-5">
+        <div class="row">
+            <!-- منوی کناری -->
+            <div class="col-lg-3">
+                <div class="lesson-sidebar sticky-lg-top">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">فهرست مطالب</h5>
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#intro">مقدمه</a>
+                                <a class="nav-link" href="#strategy1">راهبرد رسم شکل</a>
+                                <a class="nav-link" href="#strategy2">راهبرد الگوسازی</a>
+                                <a class="nav-link" href="#strategy3">راهبرد حدس و آزمایش</a>
+                                <a class="nav-link" href="#strategy4">راهبرد حل مسئله ساده‌تر</a>
+                                <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                            </nav>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- محتوای اصلی -->
-                <div class="col-lg-9">
-                    <article class="lesson-content">
-                        <section id="strategy1" class="mb-5">
-                            <h2>راهبرد رسم شکل</h2>
-                            <p>یکی از روش‌های مؤثر در حل مسائل ریاضی، استفاده از رسم شکل است.</p>
+            <!-- محتوای درس -->
+            <div class="col-lg-9">
+                <article class="lesson-content">
+                    <section id="intro">
+                        <h2>مقدمه</h2>
+                        <p>در این فصل با راهبردهای مختلف حل مسئله آشنا می‌شویم. این راهبردها به ما کمک می‌کنند تا مسائل ریاضی را به روش‌های مختلف حل کنیم.</p>
+                    </section>
+
+                    <section id="strategy1">
+                        <h2>راهبرد رسم شکل</h2>
+                        <p>گاهی رسم یک شکل ساده می‌تواند به حل مسئله کمک زیادی کند.</p>
+                        
+                        <div class="example-box">
+                            <h5>مثال 1:</h5>
+                            <p>در یک مهمانی 10 نفره، هر نفر با تمام افراد دیگر دست می‌دهد. چند دست دادن انجام می‌شود؟</p>
                             
-                            <div class="example-box bg-light p-4 rounded mb-4">
-                                <h5>مثال 1:</h5>
-                                <p>در یک باغ مستطیل شکل به طول 12 متر و عرض 8 متر، می‌خواهیم دور تا دور آن را نرده‌کشی کنیم. چند متر نرده نیاز داریم؟</p>
-                                <img src="../../images/rectangle.svg" alt="مستطیل" class="img-fluid mb-3">
-                                <button class="btn btn-primary mb-2" onclick="toggleSolution('solution1')">
-                                    نمایش راه حل
-                                </button>
-                                <div id="solution1" class="collapse">
-                                    <hr>
-                                    <p>محیط مستطیل = 2 × (طول + عرض)</p>
-                                    <p>محیط = 2 × (12 + 8) = 2 × 20 = 40</p>
-                                    <p>پس به 40 متر نرده نیاز داریم.</p>
-                                </div>
+                            <button class="btn btn-primary mb-3" onclick="toggleSolution('sol1')">نمایش راه حل</button>
+                            <div id="sol1" class="collapse">
+                                <hr>
+                                <p>با رسم شکل:</p>
+                                <ul>
+                                    <li>هر نفر با 9 نفر دیگر دست می‌دهد</li>
+                                    <li>تعداد کل: \(\frac{10 \times 9}{2} = 45\)</li>
+                                    <li>تقسیم بر 2 چون هر دست دادن را دو بار شمرده‌ایم</li>
+                                </ul>
+                                <p>پس 45 دست دادن انجام می‌شود.</p>
                             </div>
-                        </section>
+                        </div>
+                    </section>
 
-                        <!-- سایر بخش‌ها -->
-                    </article>
-                </div>
+                    <section id="strategy2">
+                        <h2>راهبرد الگوسازی</h2>
+                        <p>در این روش، با پیدا کردن یک الگو در مسئله، راه حل را پیدا می‌کنیم.</p>
+                        
+                        <div class="example-box">
+                            <h5>مثال 2:</h5>
+                            <p>الگوی زیر را ادامه دهید:</p>
+                            <div class="math-display">
+                                2, 5, 8, 11, ...
+                            </div>
+                            
+                            <button class="btn btn-primary mb-3" onclick="toggleSolution('sol2')">نمایش راه حل</button>
+                            <div id="sol2" class="collapse">
+                                <hr>
+                                <p>در این الگو:</p>
+                                <ul>
+                                    <li>هر عدد با اضافه کردن 3 به عدد قبلی به دست می‌آید</li>
+                                    <li>پس اعداد بعدی: 14, 17, 20, ...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="strategy3">
+                        <h2>راهبرد حدس و آزمایش</h2>
+                        <p>در این روش، با حدس زدن جواب و آزمایش آن، به پاسخ صحیح می‌رسیم.</p>
+                        
+                        <div class="example-box">
+                            <h5>مثال 3:</h5>
+                            <p>عددی را پیدا کنید که اگر 7 برابرش کنیم و 4 واحد از آن کم کنیم، حاصل 24 شود.</p>
+                            
+                            <button class="btn btn-primary mb-3" onclick="toggleSolution('sol3')">نمایش راه حل</button>
+                            <div id="sol3" class="collapse">
+                                <hr>
+                                <p>با حدس و آزمایش:</p>
+                                <ul>
+                                    <li>حدس اول: 5</li>
+                                    <li>7 × 5 = 35, 35 - 4 = 31 (خیلی زیاد)</li>
+                                    <li>حدس دوم: 4</li>
+                                    <li>7 × 4 = 28, 28 - 4 = 24 (درست!)</li>
+                                </ul>
+                                <p>پس جواب 4 است.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="exercises">
+                        <h2>تمرین‌ها</h2>
+                        <div class="exercise-card">
+                            <div class="card-body">
+                                <h5>تمرین 1:</h5>
+                                <p>با استفاده از راهبرد رسم شکل، تعداد مربع‌های کوچک در شکل زیر را پیدا کنید:</p>
+                                <div class="text-center mb-3">
+                                    <img src="../../images/squares.png" alt="مربع‌ها" class="img-fluid">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" id="ex1" placeholder="پاسخ خود را وارد کنید">
+                                </div>
+                                <button class="btn btn-primary" onclick="checkExercise(1)">بررسی پاسخ</button>
+                                <div id="feedback1" class="alert mt-3 d-none"></div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
             </div>
         </div>
     </main>
 
-    <!-- تغییر مسیر فایل JavaScript -->
+    <!-- اسکریپت‌ها -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../script.js"></script>
 </body>
 </html> 
