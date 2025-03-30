@@ -236,4 +236,63 @@ footer {
         width: 100%;
         margin: 0.5rem 0;
     }
+}
+
+/* اضافه کردن استایل‌های جدید برای بخش منابع */
+.resources .card {
+    transition: transform var(--transition-speed);
+}
+
+.resources .card:hover {
+    transform: translateY(-5px);
+}
+
+.list-group-item {
+    transition: background-color var(--transition-speed);
+}
+
+.list-group-item:hover {
+    background-color: var(--light-bg);
+}
+
+.badge {
+    transition: background-color var(--transition-speed);
+}
+
+.list-group-item:hover .badge {
+    background-color: var(--secondary-color) !important;
+}
+
+/* بهبود استایل فرم آپلود */
+.form-select {
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* استایل برای نمایش درس‌ها */
+.topic-section {
+    margin-bottom: 3rem;
+}
+
+.topic-section h3 {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.topic-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), transparent);
 } 
