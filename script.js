@@ -94,4 +94,105 @@ document.getElementById('category').addEventListener('change', function() {
             card.style.display = 'none';
         }
     });
+});
+
+// تنظیمات MathJax
+window.MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+
+// بررسی پاسخ تمرین نمونه
+function checkAnswer() {
+    const answer1 = document.getElementById('answer1').value.trim();
+    const answer2 = document.getElementById('answer2').value.trim();
+    const feedback = document.getElementById('feedback');
+
+    // تبدیل پاسخ‌ها به عدد
+    const x1 = parseFloat(answer1);
+    const x2 = parseFloat(answer2);
+
+    // بررسی پاسخ‌ها (x₁ = 2 و x₂ = 3)
+    if ((x1 === 2 && x2 === 3) || (x1 === 3 && x2 === 2)) {
+        feedback.className = 'alert alert-success';
+        feedback.innerHTML = `
+            <i class="bi bi-check-circle-fill"></i>
+            آفرین! پاسخ شما صحیح است.
+            <br>
+            توضیح: با استفاده از فرمول \( x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \)
+        `;
+    } else {
+        feedback.className = 'alert alert-danger';
+        feedback.innerHTML = `
+            <i class="bi bi-x-circle-fill"></i>
+            پاسخ نادرست. دوباره تلاش کنید.
+            <br>
+            راهنمایی: از فرمول حل معادله درجه دوم استفاده کنید.
+        `;
+    }
+    feedback.classList.remove('d-none');
+    MathJax.typeset([feedback]);
+}
+
+// انیمیشن اسکرول
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// تغییر استایل هدر هنگام اسکرول
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+});
+
+// فرم‌های ورود و ثبت‌نام
+document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // اینجا کد مربوط به ارسال اطلاعات ورود اضافه می‌شود
+});
+
+// نمایش پیام‌های موفقیت/خطا
+function showMessage(message, type = 'success') {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
+    alertDiv.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    document.body.appendChild(alertDiv);
+    setTimeout(() => alertDiv.remove(), 3000);
+}
+
+// بارگذاری تنبل تصاویر
+document.addEventListener('DOMContentLoaded', () => {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    if ('loading' in HTMLImageElement.prototype) {
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // پشتیبانی از مرورگرهای قدیمی
+        const lazyLoadScript = document.createElement('script');
+        lazyLoadScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js';
+        document.body.appendChild(lazyLoadScript);
+    }
 }); 
