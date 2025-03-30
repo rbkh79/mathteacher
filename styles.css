@@ -1,18 +1,29 @@
 :root {
-    --primary-color: #2c3e50;  /* رنگ اصلی - آبی تیره */
-    --secondary-color: #3498db; /* رنگ ثانویه - آبی روشن */
-    --accent-color: #e74c3c;   /* رنگ تاکیدی - قرمز */
-    --background-color: #f8f9fa;
-    --text-color: #2c3e50;
+    --primary-color: #2b6cb0;
+    --secondary-color: #4299e1;
+    --accent-color: #f6ad55;
+    --background-color: #f7fafc;
+    --text-color: #2d3748;
     --border-radius: 8px;
     --transition: all 0.3s ease;
     --sidebar-bg: #ffffff;
+    --chapter-colors: {
+        1: #3182ce,  /* آبی - راهبردهای حل مسئله */
+        2: #805ad5,  /* بنفش - عددهای صحیح */
+        3: #38a169,  /* سبز - جبر و معادله */
+        4: #d69e2e,  /* نارنجی - هندسه و استدلال */
+        5: #e53e3e,  /* قرمز - شمارنده‌ها */
+        6: #319795,  /* فیروزه‌ای - سطح و حجم */
+        7: #b83280,  /* صورتی - توان و جذر */
+        8: #6b46c1,  /* بنفش تیره - بردار و مختصات */
+        9: #2c5282   /* آبی تیره - آمار و احتمال */
+    }
 }
 
 /* تنظیمات پایه */
 body {
     font-family: 'Vazir', sans-serif;
-    line-height: 1.8;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--background-color);
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTAgMGg2MHY2MEgweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZThlOGU4IiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+');
@@ -334,48 +345,55 @@ body {
 /* هدر اصلی */
 .main-header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 2rem 0;
-    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.1;
 }
 
 /* کارت‌های فصل */
 .chapter-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: none;
 }
 
 .chapter-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.chapter-card .card-header {
-    background: var(--primary-color);
+/* رنگ‌بندی هدر کارت‌ها بر اساس فصل */
+.chapter-card:nth-child(1) .card-header { background: var(--chapter-colors-1); }
+.chapter-card:nth-child(2) .card-header { background: var(--chapter-colors-2); }
+.chapter-card:nth-child(3) .card-header { background: var(--chapter-colors-3); }
+.chapter-card:nth-child(4) .card-header { background: var(--chapter-colors-4); }
+.chapter-card:nth-child(5) .card-header { background: var(--chapter-colors-5); }
+.chapter-card:nth-child(6) .card-header { background: var(--chapter-colors-6); }
+.chapter-card:nth-child(7) .card-header { background: var(--chapter-colors-7); }
+.chapter-card:nth-child(8) .card-header { background: var(--chapter-colors-8); }
+.chapter-card:nth-child(9) .card-header { background: var(--chapter-colors-9); }
+
+.card-header {
+    padding: 1.5rem;
+    border: none;
     color: white;
-    border-radius: 10px 10px 0 0;
-    padding: 1rem;
 }
 
-/* باکس مثال‌ها */
-.example-box {
-    background: #f1f8ff;
-    border-right: 4px solid var(--secondary-color);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 0 5px 5px 0;
-}
-
-/* باکس تمرین‌ها */
-.exercise-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-}
-
-.exercise-card .card-body {
+.card-body {
     padding: 1.5rem;
 }
 
@@ -383,21 +401,112 @@ body {
 .btn-primary {
     background: var(--secondary-color);
     border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .btn-primary:hover {
     background: var(--primary-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
 }
 
-/* فرمول‌های ریاضی */
-.math-display {
-    background: white;
-    padding: 1rem;
-    border-radius: 5px;
-    margin: 1rem 0;
-    overflow-x: auto;
+/* نمادهای ریاضی شناور در پس‌زمینه */
+.math-symbols {
+    position: absolute;
+    opacity: 0.1;
+    font-size: 2rem;
+    color: white;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* بخش عنوان هر پایه */
+.grade-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.grade-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* انیمیشن ورود کارت‌ها */
+.chapter-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 2rem 0;
+    }
+    
+    .chapter-card {
+        margin: 0.5rem;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+}
+
+/* استایل فوتر */
+footer {
+    background: var(--primary-color);
+    color: white;
+    margin-top: 4rem;
+}
+
+footer h5 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* افکت‌های تعاملی */
+.chapter-card .btn-primary {
+    opacity: 0.9;
+}
+
+.chapter-card:hover .btn-primary {
+    opacity: 1;
+}
+
+/* نشانگر پیشرفت */
+.progress-indicator {
+    height: 4px;
+    background: var(--accent-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: width 0.3s ease;
 } 
