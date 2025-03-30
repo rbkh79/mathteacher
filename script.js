@@ -174,7 +174,9 @@ document.getElementById('loginForm')?.addEventListener('submit', function(e) {
 function showMessage(message, type = 'success') {
     const alertDiv = document.createElement('div');
     alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
+    alertDiv.style.zIndex = '1050';
     alertDiv.innerHTML = `
+        <i class="bi bi-${type === 'success' ? 'check-circle' : 'info-circle'}-fill me-2"></i>
         ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
@@ -195,4 +197,24 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyLoadScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js';
         document.body.appendChild(lazyLoadScript);
     }
+});
+
+// اضافه کردن مدیریت آپلود فایل
+document.getElementById('uploadForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // در حالت واقعی، اینجا باید از FormData برای ارسال فایل به سرور استفاده شود
+    showMessage('فایل با موفقیت بارگذاری شد', 'success');
+    
+    // پاک کردن فرم
+    this.reset();
+});
+
+// مدیریت دانلود فایل‌ها
+document.querySelectorAll('.list-group-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        // در حالت واقعی، اینجا باید لینک دانلود فایل قرار گیرد
+        showMessage('دانلود فایل شروع شد', 'info');
+    });
 }); 
