@@ -3,184 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ریاضی هفتم و هشتم</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <title>آموزش ریاضی هفتم و هشتم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazir', Tahoma, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .feature-item i {
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- هدر -->
-    <header class="main-header">
+    <header>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 text-center text-lg-end">
-                    <h1 class="display-4 mb-3">آموزش ریاضی هفتم و هشتم</h1>
-                    <p class="lead mb-4">یادگیری ریاضی را ساده و لذت‌بخش کنید</p>
-                </div>
-                <div class="col-lg-4">
-                    <img src="images/math-hero.svg" alt="ریاضی" class="img-fluid floating">
-                </div>
-            </div>
+            <h1>آموزش ریاضی هفتم و هشتم</h1>
+            <p class="subtitle">یادگیری ریاضی را با ما آسان کنید</p>
         </div>
     </header>
 
-    <!-- بخش اصلی -->
-    <main class="py-5">
-        <div class="container">
-            <!-- پایه هفتم -->
-            <section class="mb-5">
-                <h2 class="text-center mb-4">ریاضی پایه هفتم</h2>
-                <div class="row g-4">
-                    <!-- فصل 1 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 1: راهبردهای حل مسئله</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با روش‌های مختلف حل مسئله</p>
-                                <a href="1.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
+    <main class="container">
+        <div class="main-content">
+            <div class="card">
+                <h2>ریاضی هفتم</h2>
+                <p>دوره جامع آموزش ریاضی پایه هفتم با روش‌های نوین آموزشی و مثال‌های کاربردی</p>
+                <a href="#" class="cta-button">شروع یادگیری</a>
+            </div>
 
-                    <!-- فصل 2 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 2: عددهای صحیح</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با اعداد صحیح و عملیات روی آنها</p>
-                                <a href="2.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 3 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 3: جبر و معادله</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با عبارت‌های جبری و حل معادلات ساده</p>
-                                <a href="3.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 4 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 4: هندسه و استدلال</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با مفاهیم پایه هندسه و روش‌های استدلال</p>
-                                <a href="4.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 5 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 5: شمارنده‌ها و اعداد اول</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با مفهوم شمارنده و اعداد اول</p>
-                                <a href="5.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 6 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 6: سطح و حجم</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>محاسبه مساحت و حجم اشکال هندسی</p>
-                                <a href="6.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 7 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 7: توان و جذر</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با توان‌ها و محاسبه جذر اعداد</p>
-                                <a href="7.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 8 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 8: بردار و مختصات</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با مختصات و بردارها در صفحه</p>
-                                <a href="8.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- فصل 9 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="chapter-card">
-                            <div class="card-header">
-                                <h3 class="h5 mb-0">فصل 9: آمار و احتمال</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>آشنایی با مفاهیم پایه آمار و احتمال</p>
-                                <a href="9.html" class="btn btn-primary">مشاهده درس</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- پایه هشتم -->
-            <section>
-                <h2 class="text-center mb-4">ریاضی پایه هشتم</h2>
-                <div class="row g-4">
-                    <!-- فصل‌های هشتم -->
-                    <div class="col-12 text-center">
-                        <p class="lead">به زودی اضافه خواهد شد...</p>
-                    </div>
-                </div>
-            </section>
+            <div class="card">
+                <h2>ریاضی هشتم</h2>
+                <p>آموزش کامل مفاهیم ریاضی هشتم با تمرین‌های متنوع و حل مسائل</p>
+                <a href="#" class="cta-button">شروع یادگیری</a>
+            </div>
         </div>
-    </main>
 
-    <!-- فوتر -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>درباره ما</h5>
-                    <p>وبسایت آموزش ریاضی برای دانش‌آموزان پایه هفتم و هشتم</p>
+        <div class="features">
+            <div class="feature-item">
+                <i class="fas fa-book"></i>
+                <div>
+                    <h3>محتوی آموزشی</h3>
+                    <p>دسترسی به درسنامه‌های کامل و کاربردی</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <h5>ارتباط با ما</h5>
-                    <p>ایمیل: info@example.com</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-video"></i>
+                <div>
+                    <h3>ویدیوهای آموزشی</h3>
+                    <p>فیلم‌های آموزشی با کیفیت بالا</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-tasks"></i>
+                <div>
+                    <h3>تمرین و تست</h3>
+                    <p>بانک سوالات و تمرینات متنوع</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>پشتیبانی</h3>
+                    <p>راهنمایی و پاسخ به سوالات شما</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </main>
 
-    <!-- اسکریپت‌ها -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>تمامی حقوق محفوظ است © ۱۴۰۲</p>
+            <p>طراحی شده با ❤️ برای دانش‌آموزان عزیز</p>
+        </div>
+    </footer>
 </body>
 </html> 
