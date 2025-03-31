@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ریاضی هشتم - محتوای درسی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazir', Tahoma, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chapter-card h2 {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .chapter-card p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .lesson-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .lesson-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lesson-list a {
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lesson-list a:hover {
+            color: #764ba2;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ریاضی هشتم</h1>
+            <p class="subtitle">فصل‌های درسی ریاضی هشتم</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-right"></i>
+            بازگشت به صفحه اصلی
+        </a>
+
+        <div class="chapters">
+            <div class="chapter-card">
+                <h2>فصل اول: عددهای گویا</h2>
+                <p>آشنایی با اعداد گویا و عملیات روی آنها</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter1/lesson1.html"><i class="fas fa-play-circle"></i> درس اول: معرفی عددهای گویا</a></li>
+                    <li><a href="chapter1/lesson2.html"><i class="fas fa-play-circle"></i> درس دوم: جمع و تفریق عددهای گویا</a></li>
+                    <li><a href="chapter1/lesson3.html"><i class="fas fa-play-circle"></i> درس سوم: ضرب و تقسیم عددهای گویا</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل دوم: مثلث</h2>
+                <p>مفاهیم پیشرفته مثلث و قضایای آن</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter2/lesson1.html"><i class="fas fa-play-circle"></i> درس اول: قضیه فیثاغورس</a></li>
+                    <li><a href="chapter2/lesson2.html"><i class="fas fa-play-circle"></i> درس دوم: تشابه مثلث‌ها</a></li>
+                    <li><a href="chapter2/lesson3.html"><i class="fas fa-play-circle"></i> درس سوم: مثلث‌های متساوی‌الساقین</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل سوم: توان و جذر</h2>
+                <p>مفاهیم توان و جذر اعداد</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter3/lesson1.html"><i class="fas fa-play-circle"></i> درس اول: توان با توان صحیح</a></li>
+                    <li><a href="chapter3/lesson2.html"><i class="fas fa-play-circle"></i> درس دوم: جذر تقریبی</a></li>
+                    <li><a href="chapter3/lesson3.html"><i class="fas fa-play-circle"></i> درس سوم: ریشه‌های دوم و سوم</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل چهارم: معادله‌های خطی</h2>
+                <p>حل معادله‌های خطی و کاربردهای آن</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter4/lesson1.html"><i class="fas fa-play-circle"></i> درس اول: معادله‌های خطی</a></li>
+                    <li><a href="chapter4/lesson2.html"><i class="fas fa-play-circle"></i> درس دوم: نمودار معادله خطی</a></li>
+                    <li><a href="chapter4/lesson3.html"><i class="fas fa-play-circle"></i> درس سوم: کاربرد معادله‌های خطی</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>تمامی حقوق محفوظ است © ۱۴۰۲</p>
+            <p>طراحی شده با ❤️ برای دانش‌آموزان عزیز</p>
+        </div>
+    </footer>
+</body>
+</html> 
