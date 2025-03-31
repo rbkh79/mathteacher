@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فصل 2: عددهای صحیح | ریاضی هفتم</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazir', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .lesson-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .example-box, .exercise-card {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .math-display {
+            font-size: 1.2em;
+            margin: 15px 0;
+            text-align: center;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .sticky-lg-top {
+            top: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .collapse {
+            display: none;
+        }
+        .info-box {
+            background-color: #e3f2fd;
+            border-right: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- نوار ناوبری -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ریاضی هفتم - فصل دوم</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">صفحه اصلی</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">فصل‌های ریاضی هفتم</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- محتوای اصلی -->
+    <main class="container py-5">
+        <div class="row">
+            <!-- منوی کناری -->
+            <div class="col-lg-3">
+                <div class="lesson-sidebar sticky-lg-top">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">فهرست مطالب</h5>
+                            <nav class="nav flex-column">
+                                <a class="nav-link" href="#intro">مقدمه</a>
+                                <a class="nav-link" href="#section1">معرفی عددهای صحیح</a>
+                                <a class="nav-link" href="#section2">مقایسه و ترتیب عددهای صحیح</a>
+                                <a class="nav-link" href="#section3">جمع و تفریق عددهای صحیح</a>
+                                <a class="nav-link" href="#section4">ضرب و تقسیم عددهای صحیح</a>
+                                <a class="nav-link" href="#section5">خواص عددهای صحیح</a>
+                                <a class="nav-link" href="#section6">مثال‌های ترکیبی</a>
+                                <a class="nav-link" href="#exercises">تمرین‌ها</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- محتوای درس -->
+            <div class="col-lg-9">
+                <article class="lesson-content">
+                    <section id="intro">
+                        <h2>مقدمه</h2>
+                        <p>در این فصل با عددهای صحیح آشنا می‌شویم. عددهای صحیح شامل تمام اعداد مثبت (مثل 1، 2، 3)، صفر (0) و اعداد منفی (مثل -1، -2، -3) هستند. این اعداد در زندگی روزمره کاربرد زیادی دارند، مثلاً برای نشان دادن دما (زیر صفر یا بالای صفر) یا بدهی و طلب در مسائل مالی.</p>
+                    </section>
+
+                    <section id="section1">
+                        <h2>معرفی عددهای صحیح</h2>
+                        <div class="info-box">
+                            <h5>تعریف:</h5>
+                            <p>عددهای صحیح مجموعه‌ای از اعداد هستند که شامل:</p>
+                            <ul>
+                                <li><strong>اعداد مثبت:</strong> 1، 2، 3، ...</li>
+                                <li><strong>صفر:</strong> 0</li>
+                                <li><strong>اعداد منفی:</strong> -1، -2، -3، ...</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>ویژگی‌ها:</h5>
+                            <ul>
+                                <li>عددهای صحیح روی محور اعداد نمایش داده می‌شوند.</li>
+                                <li>صفر در وسط است، اعداد مثبت سمت راست و اعداد منفی سمت چپ قرار دارند.</li>
+                                <li>هر عدد صحیح یک مقدار مطلق دارد که فاصله آن از صفر است.</li>
+                            </ul>
+                            <p>مثال مقدار مطلق: |-5| = 5 و |4| = 4</p>
+                        </div>
+                    </section>
+
+                    <section id="section2">
+                        <h2>مقایسه و ترتیب عددهای صحیح</h2>
+                        <div class="info-box">
+                            <h5>قوانین مقایسه:</h5>
+                            <ul>
+                                <li>عدد سمت چپ روی محور اعداد از عدد سمت راست کوچک‌تر است.</li>
+                                <li>صفر از همه اعداد منفی بزرگ‌تر و از همه اعداد مثبت کوچک‌تر است.</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌ها:</h5>
+                            <p>1. مقایسه -4 و -6:</p>
+                            <p>جواب: -4 > -6 (چون -4 به صفر نزدیک‌تر است)</p>
+                            <p>2. مرتب‌سازی اعداد -3، 0، 2، -5 از کوچک به بزرگ:</p>
+                            <p>جواب: -5، -3، 0، 2</p>
+                        </div>
+                    </section>
+
+                    <section id="section3">
+                        <h2>جمع و تفریق عددهای صحیح</h2>
+                        <div class="info-box">
+                            <h5>قوانین جمع:</h5>
+                            <ul>
+                                <li><strong>دو عدد هم‌علامت:</strong> علامت را نگه دار و مقدار مطلق‌ها را جمع کن</li>
+                                <li><strong>دو عدد غیرهم‌علامت:</strong> مقدار مطلق بزرگ‌تر را از کوچک‌تر کم کن و علامت عدد بزرگ‌تر را بگذار</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌های جمع:</h5>
+                            <ul>
+                                <li>3 + 5 = 8</li>
+                                <li>-2 + (-4) = -6</li>
+                                <li>-7 + 3 = -4</li>
+                                <li>5 + (-2) = 3</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-box">
+                            <h5>قوانین تفریق:</h5>
+                            <p>تفریق را به جمع تبدیل کن: a - b = a + (-b)</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌های تفریق:</h5>
+                            <ul>
+                                <li>4 - 7 = 4 + (-7) = -3</li>
+                                <li>-5 - (-3) = -5 + 3 = -2</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section4">
+                        <h2>ضرب و تقسیم عددهای صحیح</h2>
+                        <div class="info-box">
+                            <h5>قوانین ضرب:</h5>
+                            <ul>
+                                <li>دو عدد هم‌علامت: جواب مثبت است</li>
+                                <li>دو عدد غیرهم‌علامت: جواب منفی است</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌های ضرب:</h5>
+                            <ul>
+                                <li>3 × 4 = 12</li>
+                                <li>-2 × (-5) = 10</li>
+                                <li>-6 × 3 = -18</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-box">
+                            <h5>قوانین تقسیم:</h5>
+                            <p>قوانین علامت مثل ضرب است.</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌های تقسیم:</h5>
+                            <ul>
+                                <li>-12 ÷ 3 = -4</li>
+                                <li>-15 ÷ (-5) = 3</li>
+                                <li>8 ÷ (-2) = -4</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section5">
+                        <h2>خواص عددهای صحیح</h2>
+                        <div class="info-box">
+                            <h5>خواص اصلی:</h5>
+                            <ul>
+                                <li>جمع و ضرب جابجایی‌پذیرند</li>
+                                <li>صفر در جمع خنثی است: a + 0 = a</li>
+                                <li>یک در ضرب خنثی است: a × 1 = a</li>
+                                <li>عکس هر عدد: جمع یک عدد با عکسش صفر می‌شود</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال‌ها:</h5>
+                            <ul>
+                                <li>2 + (-3) = -3 + 2</li>
+                                <li>-4 × 5 = 5 × (-4)</li>
+                                <li>3 + (-3) = 0</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section6">
+                        <h2>مثال‌های ترکیبی</h2>
+                        <div class="example-box">
+                            <h5>مثال 1:</h5>
+                            <p>محاسبه عبارت: -5 + 3 - (-2)</p>
+                            <button class="btn btn-primary mb-3" onclick="toggleSolution('sol1')">نمایش راه حل</button>
+                            <div id="sol1" class="collapse">
+                                <hr>
+                                <p>مرحله 1: -5 + 3 = -2</p>
+                                <p>مرحله 2: -2 - (-2) = -2 + 2 = 0</p>
+                                <p>جواب: 0</p>
+                            </div>
+                        </div>
+
+                        <div class="example-box">
+                            <h5>مثال 2:</h5>
+                            <p>محاسبه عبارت: (-4 × 2) + (6 ÷ -3)</p>
+                            <button class="btn btn-primary mb-3" onclick="toggleSolution('sol2')">نمایش راه حل</button>
+                            <div id="sol2" class="collapse">
+                                <hr>
+                                <p>مرحله 1: -4 × 2 = -8</p>
+                                <p>مرحله 2: 6 ÷ -3 = -2</p>
+                                <p>مرحله 3: -8 + (-2) = -10</p>
+                                <p>جواب: -10</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="exercises">
+                        <h2>تمرین‌ها</h2>
+                        <div class="exercise-card">
+                            <h5>تمرین 1:</h5>
+                            <p>اعداد -7، 2، -1، 0 را از کوچک به بزرگ مرتب کنید.</p>
+                            <input type="text" class="form-control mb-3" id="ex1" placeholder="پاسخ خود را وارد کنید">
+                            <button class="btn btn-primary" onclick="checkExercise(1, '-7, -1, 0, 2')">بررسی پاسخ</button>
+                            <div id="feedback1" class="alert mt-3 d-none"></div>
+                        </div>
+
+                        <div class="exercise-card">
+                            <h5>تمرین 2:</h5>
+                            <p>محاسبه کنید: 8 + (-5)</p>
+                            <input type="number" class="form-control mb-3" id="ex2" placeholder="پاسخ خود را وارد کنید">
+                            <button class="btn btn-primary" onclick="checkExercise(2, 3)">بررسی پاسخ</button>
+                            <div id="feedback2" class="alert mt-3 d-none"></div>
+                        </div>
+
+                        <div class="exercise-card">
+                            <h5>تمرین 3:</h5>
+                            <p>مقدار مطلق |-6| را پیدا کنید.</p>
+                            <input type="number" class="form-control mb-3" id="ex3" placeholder="پاسخ خود را وارد کنید">
+                            <button class="btn btn-primary" onclick="checkExercise(3, 6)">بررسی پاسخ</button>
+                            <div id="feedback3" class="alert mt-3 d-none"></div>
+                        </div>
+
+                        <div class="exercise-card">
+                            <h5>تمرین 4:</h5>
+                            <p>دمای هوا صبح -2 درجه بود و ظهر به 5 درجه رسید. چند درجه تغییر کرده است؟</p>
+                            <input type="number" class="form-control mb-3" id="ex4" placeholder="پاسخ خود را وارد کنید">
+                            <button class="btn btn-primary" onclick="checkExercise(4, 7)">بررسی پاسخ</button>
+                            <div id="feedback4" class="alert mt-3 d-none"></div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- اسکریپت‌ها -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSolution(id) {
+            let element = document.getElementById(id);
+            element.classList.toggle('collapse');
+        }
+
+        function checkExercise(exNumber, correctAnswer) {
+            let input = document.getElementById(`ex${exNumber}`).value;
+            let feedback = document.getElementById(`feedback${exNumber}`);
+            feedback.classList.remove('d-none', 'alert-success', 'alert-danger');
+
+            if (input.trim() == correctAnswer) {
+                feedback.classList.add('alert-success');
+                feedback.textContent = 'پاسخ درست است! عالی بود!';
+            } else {
+                feedback.classList.add('alert-danger');
+                feedback.textContent = 'پاسخ نادرست است. دوباره تلاش کن!';
+            }
+        }
+    </script>
+</body>
+</html> 
