@@ -1,1 +1,250 @@
- 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ریاضی هفتم - محتوای درسی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazir', Tahoma, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chapter-card h2 {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .chapter-card p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .lesson-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .lesson-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lesson-list a {
+            color: #667eea;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lesson-list a:hover {
+            color: #764ba2;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ریاضی هفتم</h1>
+            <p class="subtitle">فصل‌های درسی ریاضی هفتم</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../index.html" class="back-button">
+            <i class="fas fa-arrow-right"></i>
+            بازگشت به صفحه اصلی
+        </a>
+
+        <div class="chapters">
+            <div class="chapter-card">
+                <h2>فصل 1: راهبردهای حل مسئله</h2>
+                <p>آشنایی با روش‌های مختلف حل مسئله</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter1/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: راهبرد رسم شکل</a></li>
+                    <li><a href="chapter1/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: راهبرد الگوسازی</a></li>
+                    <li><a href="chapter1/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: راهبرد حدس و آزمایش</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 2: عددهای صحیح</h2>
+                <p>آشنایی با اعداد صحیح و عملیات روی آنها</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter2/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: عددهای صحیح</a></li>
+                    <li><a href="chapter2/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: جمع و تفریق اعداد صحیح</a></li>
+                    <li><a href="chapter2/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: ضرب و تقسیم اعداد صحیح</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 3: جبر و معادله</h2>
+                <p>آشنایی با عبارت‌های جبری و حل معادلات ساده</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter3/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: عبارت‌های جبری</a></li>
+                    <li><a href="chapter3/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: مقدار عددی عبارت جبری</a></li>
+                    <li><a href="chapter3/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: معادله و حل آن</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 4: هندسه و استدلال</h2>
+                <p>آشنایی با مفاهیم پایه هندسه و روش‌های استدلال</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter4/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: ترسیم‌های هندسی</a></li>
+                    <li><a href="chapter4/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: زاویه و انواع آن</a></li>
+                    <li><a href="chapter4/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: استدلال در هندسه</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 5: شمارنده‌ها و اعداد اول</h2>
+                <p>آشنایی با مفهوم شمارنده و اعداد اول</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter5/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: شمارنده‌های یک عدد</a></li>
+                    <li><a href="chapter5/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: اعداد اول</a></li>
+                    <li><a href="chapter5/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: ب.م.م و ک.م.م</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 6: سطح و حجم</h2>
+                <p>محاسبه مساحت و حجم اشکال هندسی</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter6/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: مساحت اشکال هندسی</a></li>
+                    <li><a href="chapter6/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: حجم اجسام هندسی</a></li>
+                    <li><a href="chapter6/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: گسترده اجسام هندسی</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 7: توان و جذر</h2>
+                <p>آشنایی با توان‌ها و محاسبه جذر اعداد</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter7/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: توان‌های صحیح</a></li>
+                    <li><a href="chapter7/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: محاسبه جذر</a></li>
+                    <li><a href="chapter7/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: عبارت‌های جبری توان‌دار</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 8: بردار و مختصات</h2>
+                <p>آشنایی با مختصات و بردارها در صفحه</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter8/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: مختصات نقاط</a></li>
+                    <li><a href="chapter8/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: بردارها</a></li>
+                    <li><a href="chapter8/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: جمع و تفریق بردارها</a></li>
+                </ul>
+            </div>
+
+            <div class="chapter-card">
+                <h2>فصل 9: آمار و احتمال</h2>
+                <p>آشنایی با مفاهیم پایه آمار و احتمال</p>
+                <ul class="lesson-list">
+                    <li><a href="chapter9/lesson1.html"><i class="fas fa-play-circle"></i> درس 1: جمع‌آوری و نمایش داده‌ها</a></li>
+                    <li><a href="chapter9/lesson2.html"><i class="fas fa-play-circle"></i> درس 2: معیارهای آماری</a></li>
+                    <li><a href="chapter9/lesson3.html"><i class="fas fa-play-circle"></i> درس 3: احتمال ساده</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>تمامی حقوق محفوظ است © ۱۴۰۲</p>
+            <p>طراحی شده با ❤️ برای دانش‌آموزان عزیز</p>
+        </div>
+    </footer>
+</body>
+</html> 
